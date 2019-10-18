@@ -1,0 +1,22 @@
+/**
+ *
+ * Created with JetBrains WebStorm.
+ * User: Administrator
+ * Date: 13-10-19
+ * Time: 下午4:53
+ * To change this template use File | Settings | File Templates.
+ */
+
+    function columnFix(obj,clsFix){
+        if(obj.length>0){
+            var obj_t=obj.offset().top;
+            $(window).scroll(function(){
+                var scr_top=$(document).scrollTop();
+                if(scr_top>obj_t){
+                    obj.addClass(clsFix);
+                }else{
+                    obj.removeClass(clsFix)
+                }
+            })
+        }
+    }

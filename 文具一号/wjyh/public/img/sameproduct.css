@@ -1,0 +1,157 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.curr{
+	font-weight: 700;
+	background: url(../images/sameproduct/same_title.jpg) no-repeat !important;
+	border-bottom: none !important;
+	border-right: 1px solid #dcdcdc !important;
+	border-left: 1px solid #dcdcdc !important;
+}
+.dn{
+	display: none;
+}
+.ovh{
+	overflow: hidden;
+}
+.w150{
+	width: 150px;
+}
+.mb10{
+	margin-bottom: 10px !important;
+}
+.lh30{
+	line-height: 30px;
+}
+.w100{
+	width: 100px;
+}
+.w787{
+	width: 787px;
+}
+.fl{
+	float: left;
+}
+.lh20{
+	line-height: 20px;
+}
+.mt36{
+	margin-top: 36px;
+}
+.same_img{
+	margin-left: 13px;
+}
+.sameproduct{
+	width: 990px;
+}
+.sameproduct_title{
+	width: 990px;
+	height: 36px;
+	line-height: 36px;
+}
+.sameproduct_content1{
+	width: 988px;
+	height: 280px;
+	border: 1px solid #dcdcdc;
+	border-top: none;
+	position:relative;
+    overflow: hidden;
+}
+.sameproduct_content2{
+	width: 988px;
+	height: 280px;
+	border: 1px solid #dcdcdc;
+	border-top: none;
+	position:relative;
+    overflow: hidden;
+}
+.same_price{
+	color: #c40000;
+	font-weight: 700;
+}
+.first{
+	border-left: 1px solid #dcdcdc !important;
+}
+.title{
+	cursor: pointer;
+	background: #f6f6f6;
+	font-size: 14px;
+	text-align: center;
+	height: 34px;
+	border: 1px solid #dcdcdc;
+	border-left: none;
+	border-right: none;
+}
+.center{
+	margin: 0 auto;
+}
+.empty{
+	background: #f6f6f6;
+	height: 34px;
+	float: left;
+    width: 786px;
+    border: 1px solid #dcdcdc;
+    border-left: none;
+}
+.same_active{
+    width:988px;position:absolute;height:230px; overflow: hidden
+}
+/*
+.sameproduct_content1 ul{
+	position:absolute;
+	width: 999999px;
+}
+*/
+.sameproduct_content1 ul li{
+	list-style: none;
+	float: left;
+}
+/*
+.sameproduct_content2 ul{
+	position:absolute;
+	width: 999999px;
+}
+*/
+.sameproduct_content2 ul li{
+	list-style: none;
+	float: left;
+}
+.arrow_left{
+	width:35px ;
+	height: 35px;
+	position: absolute;
+	top: 90px;
+	z-index: 10;
+	cursor: pointer;
+	background: url(../images/sameproduct/arrow_left.png);
+}
+.arrow_right{
+	width:35px ;
+	height: 35px;
+	background: url(../images/sameproduct/arrow_right.png);
+	position: absolute;
+	cursor: pointer;
+	top: 90px;
+	right: 0;
+	z-index: 10;
+}
+.arrow_left2{
+	width:35px ;
+	height: 35px;
+	position: absolute;
+	top: 90px;
+	z-index: 10;
+	cursor: pointer;
+	background: url(../images/sameproduct/arrow_left.png);
+}
+.arrow_right2{
+	width:35px ;
+	height: 35px;
+	background: url(../images/sameproduct/arrow_right.png);
+	position: absolute;
+	cursor: pointer;
+	top: 90px;
+	right: 0;
+	z-index: 10;
+}

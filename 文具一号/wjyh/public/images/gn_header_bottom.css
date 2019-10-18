@@ -1,0 +1,334 @@
+@charset "utf-8";
+/* CSS Document */
+
+.root1{ background:#f5f5f5;}
+.w1190{width:1190px; margin:0 auto;}
+/*@media (min-width: 1210px){*//*屏幕宽度大于1210时用以下宽度*//*
+    .w1190{
+        width: 1190px;
+    }
+}*/
+.w140{ width:140px;}
+.gn_fl{ float:left; _display:inline;}
+.gn_fr{ float:right; _display:inline;}
+.pl15{ padding-left:15px;}
+.pl25{ padding-left:25px;}
+.pl15{ padding-left:15px;}
+.pt35{ padding-top:35px;}
+.pt5{ padding-top:5px;}
+.pt40{ padding-top:40px;}
+.pr10{ padding-right:10px;}
+.pr5{ padding-right:5px;}
+.ml5{ margin-left:5px;}
+.mr10{ margin-right:15px;}
+.mtl13{ margin:15px 0 0 13px;}
+.lh25{ line-height:25px;}
+.fb{ font-weight:bold;}
+.w198{ width:198px;}
+.w191{ width:191px;}
+.ad{ margin-bottom:30px;}
+.mr1{ margin-right:1px;}
+.db{ display:block;}
+.w400{ width:400px;}
+.w192h{ width:192px; overflow:hidden;}
+
+
+.header-line {color: #d7d7d7;}
+
+
+.w85{ width:85px;}
+.red,a.red,.red a{color:#c40000;}
+
+/*清除浮动*/
+.clearfix{*zoom:1;}
+.clearfix:after{content:"";font-size:0;height:0;overflow:hidden;display:block;clear:both;}
+
+/*头部*/
+#gn_header{ width:100%;}
+#gn_header .gn_head_nav{background-color:#f2f2f2; height:29px;line-height:29px; border-bottom:1px solid #e5e5e5; min-width:1190px; color:#999;}
+#gn_header .gn_head_nav:after{
+    content: "";
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    display: block;
+}
+#gn_header .w1190{ position:relative; z-index:99999;}
+#gn_header .gn_head_nav .gn_hnfl{ float:left; _display:inline}
+.gn_head_nav .gn_hnfl a{ color:#999;}
+.gn_head_nav .gn_hnfl a:hover{ color:#c40000; text-decoration:underline;}
+
+#gn_jsddm{margin: 0;padding: 0;}
+#gn_jsddm li{float:left;list-style: none; _display:inline;}
+#gn_jsddm li a{
+    text-decoration: none;color:#999;
+    padding: 0 10px;
+    /*padding:0 0 0 0\9;*/
+    white-space: nowrap;
+    display:block;
+    /*float: left\9;*/
+}
+#gn_jsddm li a.xlico{background:url(//image.wjyh.com/views/commimg/icon_03.png) no-repeat right center;}
+#gn_jsddm li a:hover{color:#c40000; text-decoration:underline;}
+#gn_jsddm li ul{margin: 0;padding: 0;position: absolute;visibility: hidden;border-top: 1px solid #c40000; z-index:9999;}
+#gn_jsddm li ul li{float: none;display: inline}
+/*#gn_jsddm li ul li a{width: auto;background: #ddd;color: #24313C}*/
+/*#gn_jsddm li ul li a:hover{background:#ff697a; color:#FFF;}*/
+#gn_jsddm li ul li a{width: auto;background: #F5F5F5;color: #999;}
+#gn_jsddm li ul li a:hover{color:#c40000;text-decoration:none;}
+
+.gn_qq{background:url(//image.wjyh.com/views/images/top/icon_totle.png) no-repeat; background-position:0 0; width:15px; height:15px; float:left; display:block; margin:7px 3px 0 0;}
+.gn_weixin{background:url(//image.wjyh.com/views/images/top/weixin.png) no-repeat; background-position:0 0; width:15px; height:15px; float:left; display:block; margin:7px 3px 0 0;}
+.gn_weibo{
+    background:url(//image.wjyh.com/views/images/top/icon_totle.png) no-repeat; background-position:0 -25px;
+    width:16px; height:16px; float:left; display:block; margin:8px 3px 0 10px;
+    float: left;
+}
+.gn_weixin{
+    background:url(//image.wjyh.com/views/images/top/icon_totle.png) no-repeat; background-position:-24px 0;
+    width:20px; height:20px; float:left; display:block; margin:6px 3px 0 0;
+    float: left;
+}
+/*网站导航区域*/
+#gn_web_map{right:0; width:1188px; background:#fff; border:1px solid #ccc;}
+
+#gn_web_map .webmap_info{ padding:25px;}
+#gn_web_map .webmap_info .webmaplm{ width:160px; overflow:hidden; float:left;}
+.webmap_info .webmaplm h3{ padding-left:10px; color:#666;}
+
+/*logo 搜索区域*/
+#gn_logos{/*overflow:hidden;*/background:#fff;min-width:1190px;}
+.gn_wjlogo{ float:left; _display:inline; width:130px; overflow:hidden;margin-left: 10px;}
+.gn_wjSlogan{ float:left; _display:inline;font:bold 12px/30px  "Microsoft Yahei"; color:#c40000;margin-left: 20px;height: 54px;line-height: 54px;}
+
+#gn_search_qumall{ float:right; /*width:510px;*/position:relative; padding:0 0 0 55px;top:4px;}
+#gn_search_qumall .gn_i-search{position: relative; width:494px;z-index: 11;height: 30px;border:3px solid #c40000;}
+.gn_i-search input { border: 0px; margin: 0px; height: 28px; width:400px; background-color: transparent; /*line-height:28px;*/ padding:2px 0 0 10px; position: absolute; color:#000000;}
+/*@media (min-width: 1120px){
+    #gn_search_qumall{
+        width:510px;
+    }
+    .gn_i-search input{
+        width: 414px;
+    }
+}*/
+.gn_i-search button{ background:#c40000;text-align: center; color: #FFF; height: 30px;width: 78px; border: none; cursor: pointer; float:right;font: normal 16px/30px microsoft Yahei}
+/*.gn_i-search */.searchTips{position:absolute; z-index:999;border:1px solid #ccc;width: 414px; top: 30px; background: #fff;display: none;}
+/*.gn_i-search */.searchTips dd{font-size: 12px;font-weight: bold;color: #333;line-height: 30px;height: 30px;position: relative;padding:0 10px; cursor:pointer;}
+/*.gn_i-search */.searchTips dd:hover{background: #C40000;color: #fff;}
+/*.gn_i-search */.searchTips dd .goodname{}
+/*.gn_i-search */.searchTips dd .goodnum{position: absolute;right: 10px;font-weight: normal;}
+
+.gn_hotkeywords{ padding-top:8px; height:20px; overflow:hidden; color:#999;}
+.gn_hotkeywords span{display: inline-block; float:left;}
+.gn_hotkeywords li{display: inline-block;padding: 0 9px; float:left;}
+.gn_hotkeywords li a{ color:#999;}
+.gn_hotkeywords li.hot-products a{color: #c40000;}
+
+
+.gn_buycar{ float:right;_display:inline;margin-top: 15px; margin-left:125px; width:150px;}
+.gn_buycar .gn_mybc{ color:#333; font: bold 14px/30px microsoft Yahei; background:url(//image.wjyh.com/views/images/top/icon_totle.png) no-repeat; background-position:0 -58px; width:24px; height:18px; padding-left:35px; padding-right:10px;}
+/*商家中心头部 begin*/
+.gn_store {
+    /*width: 200px;*/
+    height: 36px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.gn_store .gn_store_info {
+    float: left;
+    border-right: 1px #ccc dotted;
+    border-left:1px #ccc solid;
+    height: 100%;
+    margin-right: 20px;
+    padding-right: 20px;
+    padding-left:20px;
+    position: relative;
+}
+
+.gn_store .gn_store_info .store_name {
+    font-family: "Microsoft Yahei";
+    font-weight: bold;
+    max-width:150px;
+    overflow: hidden;
+    white-space: nowrap;/*不换行*/
+    line-height:12px;
+    margin-bottom:6px;
+}
+
+.gn_store .gn_store_score {
+    float: left;
+    color: #666;
+}
+
+.gn_store .gn_store_score .score_title {
+    letter-spacing: 4px;
+}
+
+.gn_store .gn_store_score .score_num {
+    color: #C40000;
+}
+
+.gn_store .gn_store_score .score_num dd {
+    width: 32%;
+    text-align: center;
+    display: inline;
+}
+.gn_store .gn_store_score .score_num dd i{
+    background: url(//image.wjyh.com/views/commimg/red_top.png) 0 0 no-repeat;
+    width: 9px;
+    height: 12px;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    left: 1px;
+    margin-right: 2px;
+}
+.gn_store a.gn_qq{
+    background: url(//image.wjyh.com/views/images/top/icon_totle.png) no-repeat;
+    background-position: 0 0;
+    /*position: absolute;*/
+    width: 16px;
+    height: 16px;
+    /*    right: 8px;
+        top: 15px;*/
+    margin: 2px 0 0 5px;
+}
+.gn_store .store_direct{
+    background-color:#ff9a57 ;
+    border: 1px solid #ff6600;
+    color: #945124;
+    float: left;
+    line-height: 100%;
+    padding: 2px 5px;
+}
+.buy_cart .num {
+    color: #f00;
+}
+.buy_cart {
+    float: right;
+    background-color: #961717;
+    margin-top: 4px;
+    height: 36px;
+    margin-left: -8px;
+    text-align: center;
+    color: #FFF;
+    font-size: 12px;
+    line-height: 35px;
+    padding: 0 15px 0 35px;
+    background-image: url("//image.wjyh.com/views/images/top/gouwu001.png");
+    background-position: 10px 7px;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+
+}
+@media (min-width: 1120px) {
+    .buy_cart{
+        margin-right: 0;
+    }
+}
+/*商家中心头部 end*/
+
+.gn_buycar .gn_mybcnum{ background:url(//image.wjyh.com/views/images/top/icon_totle.png) no-repeat; background-position:0 -90px; width:30px; height:30px; color:#fff; font:normal 12px/30px microsoft Yahei; text-align:center;}
+
+/*导航*/
+#gn_navbg{ background:#c40000; width:100%; min-width:1190px; position:relative;}
+#gn_nav {background:#c40000;height: 40px;line-height:40px;position: relative;width: 1190px;}
+#gn_nav .all_products {width:180px;height:40px;line-height: 40px;overflow: hidden;display: block;padding:0 0 0 20px; float:left;}
+#gn_nav .all_products a {color:#FFF; font-family: 'Microsoft Yahei';font-size:16px;  float:left; cursor: default;}
+#gn_nav .all_products a:hover{
+    text-decoration: none;
+}
+#gn_nav li {float: left;position: relative; padding-right:15px;}
+#gn_nav li a {font-size: 14px;color: #FFF; font-weight:bold;;text-align: center;display: block; padding:0 25px;}
+#gn_nav li a:hover{background-color: #db2020;}
+.gn_nav_currut {background-color: #db2020;}
+
+.gn_fwrx{background:url(//image.wjyh.com/views/images/top/tel1.png) no-repeat right 0; height:50px; width:150px; margin-top:30px;}
+/*底部*/
+#gn_bottom{ width:100%; clear: both;margin-top: 20px;}
+#gn_bottom .gn_bpart1{ background:#fff; min-width:1190px;padding-top: 20px;}
+@media (min-width: 1120px) {
+    #gn_bottom .gn_bpart1{ background:#fff; min-width:1190;}
+
+}
+.wjyh_footer{height:auto;/*overflow:hidden;*/min-height:170px;margin:0 auto;}
+.wjyh_footer{width:1190px;}
+.gn_footer_info {width: 100%;/*background: #FAFAFA;*/overflow: hidden;margin-bottom: 70px;}
+.gn_underline{height:1px;border:none;border-top:1px solid #d9d9d9;}
+.gn_footer_info .l-area,.gn_footer_info .r-area {
+    float: left;
+}
+.gn_footer_info .info_column{width:140px;/* height:100px; */float:left;padding: 20px 0 20px 12px;_padding:20px 0 20px 12px;}
+.gn_footer_info .info_column:first-child{padding-left: 70px;}
+.gn_footer_info ul{width:100%;}
+.gn_footer_info li a{height:20px;font:12px/20px 'Microsoft YaHei';color:#333;text-align:left;}
+/* .gn_footer_info .fht1{background-position: -8px 0;}
+.gn_footer_info .fht2{background-position: -11px -34px;}
+.gn_footer_info .fht3{background-position: 0 -67px;}
+.gn_footer_info .fht4{background-position: -6px -100px;}
+.gn_footer_info .fht5{background-position: -7px -133px;}
+
+.gn_footer_info .fht6{background-position: -9px -202px;} */
+.gn_footer_info .r-area img {margin-top: 20px;}
+.gn_footer_info a{color:#3E3E3E;} /* add by xiaochen */
+
+.gn_footer_info h4 {color: #6e6e6e;margin-bottom: 10px;font: 16px/20px 'Microsoft YaHei';}
+.gn_footer_feature {background: url(//image.wjyh.com/views/images/down/feature.png) no-repeat top center;width: 100%;height: 100px;margin-top: 20px;}
+/*@media (min-width: 1120px) {
+    .gn_footer_feature {background: url(//image.wjyh.com/views/images/down/feature.png) no-repeat top center;}
+}*/
+.gn_footer_black {width: 100%;height:40x;background: #c80928;color: white;font: 12px/38px 'Microsoft YaHei';text-align: center; min-width:1190px;}
+/*@media (min-width: 1120px) {
+    .gn_footer_black{
+        min-width:1190px;
+    }
+}*/
+.gn_footer_black a {color: white;margin: 0 10px 0 10px;}
+#gn_bottom .gn_bpart2{ padding-top:20px;}
+#gn_bottom .gn_bpart2 .fl_info{ color:#999; line-height:25px; float:left; _display:inline;text-align: left;}
+#gn_bottom .gn_bpart2 .fr_info{float:right; _display:inline}
+#gn_bottom .gn_bpart2 .fr_info img{margin-left: 5px;}
+.threeLogin{ color: #333; margin-bottom: 5px;}
+
+#gn_bottom .gn_bpart2 .clearfix .footLogo{display: inline-block;zoom: 1;*display: inline;_height:250px;}
+#gn_bottom .gn_bpart2 .clearfix .footLogo *{ height: 36px; width: 100px; padding: 0 1px}
+#gn_bottom .gn_bpart2 .clearfix .all_foot1{text-align: center; line-height: 25px; color: #999}
+#gn_bottom .gn_bpart2 .clearfix .all_foot2{margin-bottom: 10px;margin-top: 15px; text-align: center;}
+
+.fwn{font-weight: normal;}
+.cartstyle{
+	float:left;
+	display:block;
+}
+.cart-pic-one{
+	background:url(//image.wjyh.com/views/images/top/icon_title1.png) no-repeat 0 0;
+	width:20px;
+	height:20px;
+	
+	margin-top:5px;
+}
+.cart-text{
+	text-decoration:none !important;
+	font-size:13px !important;
+	color:#c40000 !important;
+	padding:0px !important;
+	font-family:'宋体' !important;
+}
+.cart-text a{
+	
+	
+}
+.cart-pic-two{
+	background:url(//image.wjyh.com/views/images/top/icon_title2.png) no-repeat 0 0;
+	width:17px;
+	height:17px;
+	margin-top: 5px;
+	color: #fff;
+	font: normal 12px/30px microsoft Yahei;
+	text-align: center;
+	line-height:17px;
+}

@@ -1,0 +1,206 @@
+/* 遮罩层 */
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+}
+input::-webkit-outer-spin-button {
+-webkit-appearance: none;
+}
+input[type='number']{
+	-moz-appearance:textfield;
+	-ms-appearance: none;
+}
+.login-cover{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	/*background: url(../images/brand/opacity_bg.png) repeat;*/
+	z-index: 9999999;
+	display: none;
+	left:0;
+	top:0;
+}
+.login-cover .alert-box{
+	width: 456px;
+	position: absolute;
+	left: 50%;
+	margin-left: -228px;
+	top: 50%;
+	/*margin-top: -400px;	*/
+}
+.login-cover .alert-box .alert-box-header{
+	height: 44px;
+	background: url(../images/brand/wjyh-w-logo.png) no-repeat 30px center #c40001;
+	position: relative;
+}
+.login-cover .alert-box .alert-box-header a.close-btn{
+	display: block;
+	width: 16px;
+	height: 16px;
+	background: url(../images/brand/close-btn.png);
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	margin-top: -8px;
+}
+.login-cover .alert-box .alert-box-body{
+	padding: 50px 45px 15px;
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+}
+.login-cover .alert-box .alert-box-body .notice-msg{
+	/*background: url(../images/brand/ld-dark-logo.png) no-repeat 40px center #e4e4e4;*/
+	/*width: 276px;
+	padding-left: 90px;
+	left: -366px;
+	background: url(../images/ld-r.png) no-repeat 20px center #ffe6e6;*/
+	width: 387px;
+	padding-left: 70px;
+	left: -457px;
+	background: url(../images/ld-r.png) no-repeat 40px center #ffe6e6;
+	height: 30px;
+	line-height: 30px;	
+	position: absolute;	
+	top: 15px;
+	font-size: 14px;
+	color: #2a343f;
+}
+.login-cover .alert-box .alert-box-body-title{
+	font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    height: 33px;
+    color: #666;
+}
+.login-cover .alert-box .alert-box-body form{
+	margin-top: -10px;
+}
+.login-cover .alert-box .alert-box-body .form-row{
+	border: 1px solid #a3a3a3;
+	height: 48px;
+	border-radius: 6px;
+	padding-left: 50px;
+	margin-top: 20px;
+}
+.login-cover .alert-box .alert-box-body .form-row #J_checkcode_card{
+	cursor: pointer;
+}
+.login-cover .alert-box .alert-box-body .form-row input{
+	height: 100%;
+	border: none;
+	width: 260px;
+	font-size: 16px;
+}
+.login-cover .alert-box .alert-box-body .form-row.username{
+	background: url(../images/brand/username-logo.png) no-repeat 15px center;
+}
+.login-cover .alert-box .alert-box-body .form-row.pwd{
+	background: url(../images/brand/pwd-logo.png) no-repeat 15px center;
+}
+.login-cover .alert-box .alert-box-body .line-row{
+	margin-top: 10px;
+	font-size: 13px;
+	overflow: hidden;
+}
+.login-cover .alert-box .alert-box-body .line-row a{
+	color: #3399ff;
+}
+.login-cover .alert-box .alert-box-body .line-row input{
+	position: relative;
+	top: 2px;
+}
+.login-cover .alert-box .alert-box-body .line-row label{
+	color: #666;
+	margin-left: 5px;
+	cursor: pointer;
+}
+.login-cover .alert-box .alert-box-body a.r-login-a{
+	float: right;
+	color: #333;
+}
+.login-cover .alert-box .alert-box-body a.r-login-a span{
+	color: #3399ff;
+}
+.login-cover .alert-box .alert-box-body .tj-btns{
+	width: 100%;
+	height: 49px;
+	line-height: 49px;
+	text-align: center;
+	color: #fff;
+	background: #c40001;
+	font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    border: none;
+    margin: 25px 0 15px;
+    cursor: pointer;
+}
+.login-cover .alert-box .alert-box-body .btn-disabled{    
+	background: #ededed;
+    border-color: #ededed;
+    color: #999;
+    cursor: default;
+}
+.login-cover .alert-box .alert-box-body .b-area{
+	font-size: 14px;
+	padding-bottom: 30px;
+}
+.login-cover .alert-box .alert-box-body .b-area .links{
+	padding-top: 10px;
+}
+.login-cover .alert-box .alert-box-body .b-area .links a{
+	display: block;
+	color: #666;
+	float: left;
+}
+.login-cover .alert-box .alert-box-body .b-area .links a.qq-login{
+	height: 23px;
+	line-height: 20px;
+	padding-left: 20px;
+	background: url(../images/brand/qq-logo.jpg) no-repeat 0 center;
+	margin-right: 10px;
+}
+.login-cover .alert-box .alert-box-body .b-area .links a.weibo-login{
+	height: 20px;
+	line-height: 20px;
+	padding-left: 20px;
+	background: url(../images/brand/weibo-logo.jpg) no-repeat 0 center;
+	margin-right: 10px;
+}
+.login-cover .alert-box .alert-box-body .b-area .links a.weixin-login{
+	height: 20px;
+	line-height: 20px;
+	padding-left: 20px;
+	background: url(../images/brand/weixin-logo.jpg) no-repeat 0 center;
+	
+}
+.login-cover .alert-box .alert-box-body .form-row.mobile{
+	background: url(../images/brand/mobile-logo.png) no-repeat 15px center;
+}
+.login-cover .alert-box .alert-box-body .form-row.pwd{
+	background: url(../images/brand/pwd-logo.png) no-repeat 15px center;
+}
+.login-cover .alert-box .alert-box-body .form-row.scode{
+	background: url(../images/brand/username-logo.png) no-repeat 15px center;
+}
+.login-cover .alert-box .alert-box-body .form-row.scode input{
+	width: 100px;
+}
+.login-cover .alert-box .alert-box-body .form-row.scode button{
+	width: 108px;
+	height: 30px;
+	background: #e4e4e4;
+	float: right;
+	margin: 8px 20px 8px 0;
+	border: none;
+	cursor: pointer;
+}
+.login-cover .alert-box .alert-box-body .register-form .line-row a{
+	color: #ff6600;
+}
+.login-cover .alert-box .alert-box-body .register-form .tj-btns{
+	margin: 15px 0;
+}
+.login-cover .alert-box .alert-box-body .codehidden{
+	display:none;
+}

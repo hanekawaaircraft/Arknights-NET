@@ -1,0 +1,197 @@
+/**
+ * Created with JetBrains WebStorm.
+ * User: Administrator
+ * Date: 13-11-6
+ * Time: 下午1:20
+ * To change this template use File | Settings | File Templates.
+ */
+/*店铺首页相关脚本*/
+function hover(hoverObj, obj, cls) {
+    var timer1;
+    var timer2;
+    hoverObj.hover(function () {
+        clearTimeout(timer2);
+        $(this).addClass(cls);
+        obj.show();
+    }, function () {
+        timer1 = setTimeout(function () {
+            hoverObj.removeClass(cls);
+            obj.hide();
+        }, 100)
+    });
+    obj.hover(function () {
+        clearTimeout(timer1);
+        hoverObj.addClass(cls);
+        obj.show();
+    }, function () {
+        timer2 = setTimeout(function () {
+            obj.hide();
+            hoverObj.removeClass(cls)
+        }, 100)
+
+    })
+}
+hover($('.main-info'), $(".extra-info"), "hover");
+//导航
+$('.popup-container').hover(function(){
+    $(this).find(".all-cats-popup").show();
+},function(){
+    $(this).find(".all-cats-popup").hide();
+});
+
+$('.fst-cat').hover(function(){
+    $(this).find('.snd-pop').show();
+},function(){
+    $(this).find('.snd-pop').hide();
+});
+function tab(obj1, obj2, cls) {
+    obj1.hover(function () {
+        var _idx = $(this).index();
+        $(this).addClass(cls).siblings().removeClass(cls);
+        $(obj2).eq(_idx).show().siblings(obj2).hide();
+    })
+}
+tab($(".top-list-tab li"), ".panels .panel", "selected");
+//图片轮播
+function imgSilde() {
+//    var effect=$(".slide-box").attr()
+//    data-widget-config="{
+//    'contentCls': 'slide-content',
+//        'triggerCls': 'slide-triggers',
+//        'navCls': 'slide-triggers',
+//        'activeTriggerCls': 'selected',
+//        'triggerType': 'mouse',
+//        'effect': 'fade',
+//        'prevBtnCls': 'prev-btn',
+//        'nextBtnCls': 'next-btn',
+//        'disableBtnCls': 'disable',
+//        'steps': 1,
+//        'autoplay': true,
+//        'circular': true,
+//        'length': 2,
+//        'interval': 3,
+//        'easing': 'easeBothStrong'
+//}
+    var slideParam = {
+        slideBox: 'slide-box',
+        contentCls: 'slide-content',
+        'triggerCls': 'slide-triggers',
+        'navCls': 'slide-triggers',
+        'activeTriggerCls': 'selected',
+        'triggerType': 'mouse',
+        'effect': 'fade',
+        'prevBtnCls': 'prev-btn',
+        'nextBtnCls': 'next-btn',
+        'disableBtnCls': 'disable',
+//        'steps': 1,
+        'autoplay': true,
+//        'circular': true,
+//        'length': 2,
+//        'interval': 3,
+//        'easing': 'easeBothStrong',
+        width: 990,
+        height: 300
+    };
+
+    var slideBox = $('.' + slideParam.slideBox);
+    slideBox.each(function () {
+        var t = $(this);
+        var content = $("." + slideParam.contentCls, t), trigger = $('.' + slideParam.triggerCls, t), activeCls = slideParam.activeTriggerCls, li = content.find("li", t),
+            li_len = li.length, li_w = li.width(), li_h = li.height(), effect = slideParam.effect, next_btn = $("." + slideParam.nextBtnCls, t), prev_btn = $("." + slideParam.prevBtnCls, t), _idx = 0;
+        var timer = 0;
+
+        function start() {
+            timer = setInterval(function () {
+                _idx++;
+                if (_idx == li_len) {
+                    _idx = 0
+                }
+                play();
+            }, 6000);
+        }
+
+        function play() {
+            if (effect == "fade") {
+                li.eq(_idx).fadeIn(800).siblings().fadeOut(400);
+            }
+            if (effect == "lr") {
+                content.stop().animate({"marginLeft": -_idx * li_w}, 500)
+            }
+            if (effect == "ud") {
+                content.stop().animate({"marginTop": -_idx * li_h}, 500)
+            }
+            setBtnStyle(_idx);
+        }
+
+        function setBtn() {
+            var btn = '';
+            for (var i = 1; i <= li_len; i++) {
+                btn += '<li><span>' + i + '</span></li>';
+            }
+            trigger.empty().append(btn);
+            trigger.find("li").eq(0).addClass(activeCls);
+
+        }
+
+        trigger.delegate("li", "mouseover", function () {
+            clearInterval(timer);
+            _idx = $(this).index();
+            play();
+        });
+
+        prev_btn.click(function () {
+            _idx--;
+            if (_idx == -1) {
+                _idx = li_len - 1
+            }
+            play();
+        });
+        next_btn.click(function () {
+            _idx++;
+            if (_idx == li_len) {
+                _idx = 0
+            }
+            play();
+        });
+        slideBox.hover(function () {
+                clearInterval(timer)
+            }, function () {
+                start();
+            }
+        );
+        function setBtnStyle(i) {
+            trigger.find("li").eq(i).addClass(activeCls).siblings().removeClass(activeCls)
+        }
+
+        function setStyle() {
+            if (effect == "fade") {
+                li.css({"position": "absolute"});
+                li.eq(0).show().siblings().hide();
+            }
+            if (effect == "lr") {
+                li.css({"position": "relative", "float": "left"});
+                content.width(li_len * li_w);
+            }
+            if (effect == "ud") {
+                li.css({"position": "relative"});
+                content.height(li_len * li_h);
+            }
+        }
+
+        function hoverBtn(obj) {
+            obj.hover(function () {
+                $(this).css("opacity", 1);
+            }, function () {
+                $(this).css("opacity", .5)
+            });
+        }
+
+        start();
+        setBtn();
+        setStyle();
+        hoverBtn(prev_btn);
+        hoverBtn(next_btn);
+    });
+
+}
+imgSilde();

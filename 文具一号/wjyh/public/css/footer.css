@@ -1,0 +1,142 @@
+*{margin: 0;padding: 0;font: 12px/1.5 tahoma, arial, \5b8b\4f53;}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+ul{list-style: none;}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+.img_hover{
+    transition:0.2s linear;
+}
+.img_hover:hover{
+    transform: translateX(-5px);
+}
+/* 底部 */
+#gn_bottom{
+    width: 100%;
+    margin-top: 20px;
+}
+.gn_bpart1{
+    min-width: 1190px;
+    padding-top: 20px;
+}
+.wjyh_footer{
+    width: 1190px;
+    min-height: 170px;
+    margin: 0 auto;
+}
+.gn_link_in{
+    text-align: left;
+    width: 1100px;
+    margin-left: 71px;
+}
+
+.gn_link_in li{
+    float:left;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+
+}
+.gn_link_in li.show{
+    background-color: #999;
+    color: #fff;
+}
+.gn_link_in .patener{
+    margin-top: 20px;
+    display: none;
+}
+.gn_link_in .patener.show{
+    display: block;
+}
+
+
+
+
+.gn_footer_feature{
+    background: url(../images/feature.png) no-repeat top center;
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+}
+.gn_underline{
+    height: 1px;
+    border-top:1px solid #d9d9d9; 
+}
+.gn_footer_info{
+    background: #FAFAFA;
+    margin-bottom: 70px;
+    padding-left: 50px;
+
+}
+.info_colum{
+    float: left;
+    width: 140px;
+    padding: 20px 0 20px 12px;
+}
+.info_colum h4{
+    color:#6e6e6e;
+    margin-bottom: 10px;
+    font: 16px/20px 'Microsoft YaHei';
+}
+.info_colum li{
+    height: 20px;
+}
+.info_colum li a{
+    
+    color: #333;
+    font-size: 12px;
+    
+}
+.r-area{
+    margin-top: 20px;
+}
+.gn_footer_black{
+    width: 100%;
+    height: 38px;
+    background: #c80928;
+    color: #fff;
+    font: 12px 'Microsoft YaHei';
+    text-align: center;
+    min-width: 1190px;
+}
+.gn_footer_black a{
+    color: #fff;
+    margin: 0 10px;
+    line-height: 38px;
+}
+.gn_bpart2{
+    padding-top: 20px;
+    background-color: #f5f5f5;
+}
+#gn_bottom .gn_bpart2 .all_foot1,#gn_bottom .gn_bpart2 .all_foot1 a{
+    text-align: center;
+    line-height: 25px;
+    color: #999;
+}
+
+#gn_bottom .gn_bpart2 .all_foot1 a.gn_bottom_wyjh{
+    color: #000;
+}
+#gn_bottom .gn_bpart2 .all_foot1 img{
+    position: relative;
+    top: 4px;
+}
+#gn_bottom .gn_bpart2 .all_foot2{
+    margin: 10px 0 10px;
+    text-align: center;
+}
+#gn_bottom .gn_bpart2 .all_foot2 img{
+    height: 36px;
+    width: 100px;
+}
+

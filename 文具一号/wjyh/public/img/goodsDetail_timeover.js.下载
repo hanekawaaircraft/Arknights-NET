@@ -1,0 +1,58 @@
+$(function(){
+	// showLayer(555, "popup_content_alert_2", '对不起，该商品活动已结束', function() {
+	// 	top.location.reload();
+	// });	
+	var starttime = parseInt($(".activity-djs").attr("data-starttime"))*1000;
+	var overtime = parseInt($(".activity-djs").attr("data-endtime"))*1000;
+	var timer = overtime - starttime;
+	var divname = $(".activity-djs span");
+	if (timer >=0){
+		window.setInterval(function() {
+			ShowCountDown(timer, divname);
+			timer = timer - 1000;
+		}, 1000);
+	}		
+	function ShowCountDown(leftTime, divname) {
+		//var now = new Date();
+		//var endDate = new Date(year, month - 1, day);
+		//var leftTime = timer - now.getTime();
+		var leftsecond = parseInt(leftTime / 1000);
+		var day1 = Math.floor(leftsecond / (60 * 60 * 24));
+		var hour = addZero(Math.floor((leftsecond - day1 * 24 * 60 * 60) / 3600));
+		var minute = addZero(Math.floor((leftsecond - day1 * 24 * 60 * 60 - hour * 3600) / 60));
+		var second = addZero(Math.floor(leftsecond - day1 * 24 * 60 * 60 - hour * 3600 - minute * 60));
+		if( hour > 0 || minute > 0 || second > 0 ){
+			divname[0].innerHTML = Math.abs(day1) + "天" + hour + "时" + minute + "分" + second + "秒";
+		}else if(hour == 0 || minute == 0 || second == 0){
+			divname.parent(".activity-djs").hide();
+			divname.parent(".activity-djs").prev(".buy-now").addClass("end");						
+		}
+		
+		
+	}
+	function addZero(num){
+		var arr=["0","1","2","3","4","5","6","7","8","9"];
+		for (var i = 0; i < arr.length; i++) {
+			if(num == arr[i]){
+				num = "0"+num;
+			}
+		}
+		return num;
+	}
+
+	var flag = 0;
+	$(".tb-txt").click(function(){		
+		if(!$(this).hasClass("tb-selected")){
+			flag = flag - 1;
+		}else{
+			flag = flag + 1;
+		}
+		//alert("flag="+flag);
+		if(flag == 2){
+			$(".buy-now").removeClass("end");
+		}else if(flag == 0 || flag == 1){
+			$(".buy-now").addClass("end");
+		}
+	});
+
+});

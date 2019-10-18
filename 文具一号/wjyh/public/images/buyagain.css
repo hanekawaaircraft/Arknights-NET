@@ -1,0 +1,74 @@
+.msg-cover{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url(../images/cover-bg.png) repeat;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.msg-cover .alert-msg{
+    width: 495px;
+    height: 260px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -247px;
+    top: 50%;
+    margin-top: -130px;
+}
+.msg-cover .alert-msg .alert-header{
+    height: 44px;
+    background: url(../images/wjyh-w-logo.png) no-repeat 30px center #c40001;
+    position: relative;
+}
+.msg-cover .alert-msg .alert-header a.close-btn{
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(../images/close-btn.png);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -8px;
+}
+.msg-cover .alert-msg .alert-body{
+    width: 100%;
+    height: 216px;
+    position: relative;
+}
+.msg-cover .alert-msg .alert-body p{
+    font-size: 16px;
+    text-align: center;
+    padding-top: 60px;
+}
+.msg-cover .alert-msg .alert-body ul{
+    width: 222px;
+    height: 34px;
+    position: absolute;
+    left: 50%;
+    margin-left: -111px;
+    bottom: 55px;
+}
+.msg-cover .alert-msg .alert-body ul li{
+    float: left;
+    width: 104px;
+    height: 100%;
+}
+.msg-cover .alert-msg .alert-body ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 32px;
+    font-size: 14px;
+    color: #fff !important;
+    text-align: center;
+    background: url(../images/i-know-btn.png) no-repeat center;
+}
+.msg-cover .alert-msg .alert-body ul li a:hover{
+    text-decoration: none;
+}
+.msg-cover .alert-msg .alert-body ul li.r-btn{
+    float: right;
+}

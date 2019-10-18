@@ -1,0 +1,123 @@
+/* reset */
+* html {
+    background-attachment: fixed;
+    background: url("_blank");
+}
+
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body, button, input, select {
+    font: 12px/1.5 tahoma, arial, \5b8b\4f53;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+em, i {
+    font-style: normal;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    font-size: 0;
+}
+
+button, input, select {
+    font-size: 100%;
+    outline: none;
+    _height: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clb {
+    clear: both;
+}
+
+ins {
+    text-decoration: none
+}
+
+del {
+    text-decoration: line-through
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.gvn_mask {
+    background: #000;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+address, caption, cite, code, dfn, em,  th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+#returntop {
+    position: fixed;
+    _position: absolute;
+    z-index: 99;
+    width: 20px;
+    padding: 6px 5px;
+    text-align: center;
+    bottom: 20px;
+    _top: 300px;
+    height: 87px;
+    right: 0;
+    background: #f5f5f5;
+    border: 1px solid #ebebeb;
+    color: #636363;
+    cursor: pointer;
+    display: none;
+    line-height: 18px;
+}
+
+#returntop:hover {
+    background: #999;
+    color: #fff;
+}
+
+#returntop span.icon {
+    line-height: 14px;
+    font-weight: bold;
+    position: relative;
+    margin-left: -1px;
+}

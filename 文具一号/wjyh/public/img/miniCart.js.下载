@@ -1,0 +1,227 @@
+/**
+ * Created with JetBrains WebStorm.
+ * User: kxl
+ * Date: 13-12-7
+ * Time: 下午3:42
+ * To change this template use File | Settings | File Templates.
+ */
+/*迷你购物车*/
+function MiniCart(obj) {
+    /*购物车是否有商品*/
+    this.login = false;
+    /*是否登录*/
+    this.loginPort = "index.php?app=mall/MGoods&act=ajaxCheckLogin";
+    this.root = obj.find(".mini_cart_root");
+    this.listBox = obj.find(".mini_cart_listBox");
+    this.listInner = this.listBox.find(".list_inner");
+    this.listWrap = this.listInner.find(".list_wrap");
+    this.delBtn = this.listBox.find(".del_order");
+    this.handle = obj.find('.mini_cart_handle');
+    this.romeo = obj.find(".romeo");
+    this.juliet = obj.find(".juliet");
+    this.orderNum = 0;
+    this.mcCount = $(".gn_mybcnum");
+    /*顶部购物车数量显示*/
+    this.delUrl = $('.mini_cart').attr("gdata-remove-url");
+    this.initUrl = $(".mini_cart").attr("gdata-load-url");
+    this.defaultId = $('#J_LinkBasket').attr("gdata-default-id");
+    var _this = this;
+    //this.isCartEmpty(this);
+    this.isLogin(this);
+    this.intiCartState(obj, this);
+    obj.click(function (e) {
+        e.stopPropagation();
+    });
+    this.handle.click(function () {
+
+        if (_this.login) {
+            obj.removeClass("zoom");
+            if (_this.listBox.hasClass("ul")) {
+                _this.listClose(_this);
+            } else {
+                _this.listBox.addClass("ul").show();
+                _this.getListH();
+                _this.root.addClass("open");
+            }
+        } else {
+            getLoadingWin();
+        }
+        _this.mouseOutHandle();
+
+    });
+    $(document).click(function (e) {
+        _this.listClose(_this);
+    });
+    this.handle.hover(function () {
+        if (_this.login && !obj.hasClass("zoom") && !_this.listBox.hasClass("ul")) {
+            _this.mouseOverHandle();
+        }
+    }, function () {
+        _this.mouseOutHandle();
+    });
+    /*删除订单*/
+    this.listBox.delegate(".del_order", "click", function () {
+        _this.delOrder(this, _this)
+    });
+//    this.delBtn.click(function(){
+//
+//    });
+}
+MiniCart.prototype = {
+    "mouseOverHandle": function () {
+        this.romeo.append('<s class="romeo_arr"></s>').stop().animate({"bottom": 10}, 300,function () {
+        }).find(".romeo_arr").show();
+    },
+    "mouseOutHandle": function () {
+        this.romeo.find(".romeo_arr").remove().end().stop().animate({"bottom": 0}, 300,function () {
+        }).find('.romeo_arr').hide()
+    },
+    "delOrder": function (obj, t) {
+        var self = this;
+        var id = $(obj).attr("gdata-goods-id");
+        var recId = $(obj).attr("gdata-recId");
+        var par = $(obj).parents(".bundleList");
+        $.ajax({
+            url: this.delUrl,
+            type: 'POST',
+            data: {"id": id, "recId": recId},
+            dataType: 'json',
+            success: function (data) {
+                if (data.err == 501) {
+                    alert(data.message);
+                } else if (data.err == 0) {
+                    $(obj).parent(".order_item").animate({"opacity": .3}, 300, function () {
+                        $(this).remove();
+                        if (!par.find(".order_item").length) {
+                            par.parent(".list_content").remove();
+                        }
+                        var totalBuycartNum=t.listBox.find(".order_item").length;
+                        $(".num",".buy_cart").html(totalBuycartNum);
+                        $('.mini-cart-num').html(totalBuycartNum);
+                        self.mcCount.html(t.listBox.find(".order_item").length);
+                        t.getListH();
+                    });
+                } else if (data.err == 1) {
+                    alert(data.message);
+                }
+
+            }
+        });
+
+    },
+    "listClose": function (t) {
+        t.root.removeClass("open");
+        t.listBox.removeClass("ul").animate({ "top": 10}, 300, function () {
+            $(this).hide();
+        });
+    },
+    "getListH": function () {
+        var listH = this.listInner.find(".list_wrap").outerHeight(true);
+        if (listH > 380) {
+            listH = 380;
+        }
+        this.listBox.animate({"top": -listH, "height": listH});
+        this.listInner.animate({"height": listH});
+
+        return listH;
+    },
+    "isLogin": function (t) {
+        $.ajax({
+            async: false,
+            url: this.loginPort,
+            type: "GET",
+            cache: false,
+            success: function (data) {
+                if (data == 1) {
+                    t.login = true
+                } else {
+                    t.login = false
+                }
+            }
+        });
+    },
+    /*判断购物车是否为空*/
+    "isCartEmpty": function (t) {
+        $.ajax({
+            async: false,
+            url: this.initUrl,
+            dataType: "json",
+            data: {"id": this.defaultId},
+            type: "POST",
+            cache: false,
+            success: function (data) {
+                if (data.err != 101 && (data.data!=null && data.data.length)) {
+                    $('.mini_cart').removeClass("zoom");
+                    t.createCartDom(data.data);
+                }
+            }
+        });
+    },
+    "createCartDom": function (shopInfo) {
+        var html = '';
+        /*店铺循环*/
+        for (var i in shopInfo) {
+            html += '<div class="list_content">' +
+                '<div class="bundleHeader">' +
+                '<div class="bundleTitle">' +
+                '<span title="' + shopInfo[i].storeName + '">' + shopInfo[i].storeName + '</span></div>' +
+                '</div>' +
+                '<div class="bundleList">';
+            /*商品循环*/
+            for (var j = 0, len = shopInfo[i].goods.length; j < len; j++) {
+                html += '<div class="order_item">' +
+                    //                    <a class="del_order" href="javascript:void(0)" title="删除" gdata-goods-id=’123456’>删除</a>
+                    '<a class="del_order" gdata-recId="' + shopInfo[i].goods[j].recId + '"  href="javascript:void(0)" title="删除" gdata-goods-id="' + shopInfo[i].goods[j].id + '">删除</a>' +
+                    '<div class="order_pic">' +
+                    '<a href="index.php?app=mall/MGoods&id=' + shopInfo[i].goods[j].recId + '" class="goods_pic">' +
+                    '<img src="' + shopInfo[i].goods[j].imgUrl + '!!_88X88_!!.jpg" alt="" width="50" height="50"/></a>' +
+                    '</div>' +
+                    '<div class="order_sku">' +
+                    '<p title="颜色分类:#56(黑色)">' + spec(shopInfo[i].goods[j].spec) + '</p>' +
+                    //                    '<p title="尺码:155/80A(XS)">155/80A(XS)</p>' +
+                    '</div>' +
+                    '<div class="order_account">' +
+                    '<span class="tm-mcQuantity">' + shopInfo[i].goods[j].quantity + '</span>' +
+                    '</div>' +
+                    '<div class="order_cost">' +
+                    '<strong class="order_price">' + shopInfo[i].goods[j].amount + '</strong></div></div>';
+            }
+            html += '</div></div>';
+        }
+        function spec(obj) {
+            var spec = '';
+            if (obj == null) {
+                spec = ''
+            } else {
+                spec = obj;
+            }
+            return spec;
+        }
+
+        $('.list_middle').empty().append(html);
+        $(".mini-cart-num").html($('.list_middle').find(".order_item").length);
+    },
+    /*初始化购物车样式*/
+    "intiCartState": function (obj, t) {
+        if (this.login && this.hasGoods) {
+            obj.removeClass("unlogin");
+            obj.removeClass("zoom");
+            t.juliet.html('<h3><span class="gm_e1">购物车</span> <strong class="mini-cart-num"></strong></h3>');
+        } else if (this.login && !this.hasGoods) {
+            obj.removeClass("unlogin");
+        }
+    }
+};
+var miniCart = new MiniCart($(".mini_cart"));
+function getLoadingWin() {
+        /*
+        $.get(miniLogin_pageUrl, function (data) {
+            $('body').append(data);
+            
+//          登录框
+			showLayer(420,"popup_content_start_buy");
+			$(".layui-layer-shade").css("z-index","9999");
+            $("#tml-mLogin").css("top", $(document).scrollTop() + 200);
+            login_box_status = true;
+        });*/
+}

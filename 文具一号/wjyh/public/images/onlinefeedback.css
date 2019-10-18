@@ -1,0 +1,16 @@
+/*右侧浮动窗口*/
+* html,* html body /* 修正IE6振动bug */{background-image:url(about:blank);background-attachment:fixed;_overflow-x: hidden; _overflow-y: auto; }
+.float_box{display:none; width:72px;height:536px;background:url(../images/float_box4.png) no-repeat 0 0;position:fixed;right:10px;bottom:10%; z-index:99999;_position:absolute;_right:10px;_left:expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft,10)||0)-(parseInt(this.currentStyle.marginRight,10)||0));_overflow-x: hidden;}
+.float_box .float_app{width: 93px;height: 162px;float:left;}
+.float_box .float_app:hover{background: url(../images/float_box4.png) no-repeat -78px 0;margin-left: -15px;}
+.float_box a{display:block;width:72px;height:78px;float:left;margin-top:1px;}
+.float_box a:hover{background:url(../images/float_box4.png) no-repeat -163px 0;}
+.float_box a:hover.a1{background-position:-78px -163px;}
+.float_box a:hover.a2{background-position:-78px -242px;}
+.float_box a:hover.a3{background-position:-78px -321px;}
+.float_box a:hover.a4{background-position:-78px -400px;}
+.float_box a:hover.a5{background-position:-78px -479px;}
+
+
+.quick_links_pop a{ width:auto; height:auto;float:none;}
+.quick_links_pop a:hover{ color:#09F; text-decoration:none;background:none;}

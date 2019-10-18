@@ -1,0 +1,150 @@
+
+#header{
+    
+    width: 100%;
+}
+#header-inner{
+    margin: 0 auto;
+    
+    width: 990px;
+    height: 80px;
+}
+#header #header-inner .logo{
+    
+    width: 940px;
+    height: 58px;
+    margin: 0 50px;
+    padding: 22px 0 0;
+}
+#header .logo span {
+    position: relative;
+    top: -25px;
+    font-size: 20px;
+    font-family: 微软雅黑;
+    left: 10px;
+}
+#header .logo img {
+    
+    position: relative;
+    top: -10px;
+}
+.new-login-body{
+    background-color: #e50048;
+    width: 100%;
+    height: 466px;
+}
+.new-login-body .clearfix{
+    width: 1100px;
+    height: 404px;
+    padding: 36px 0 26px;
+    margin: 0 auto;
+}
+.new-login-body .clearfix .pic img{
+    margin: 10px 30px 0 0;
+}
+.new-login-body .clearfix #page2,.new-login-body .clearfix .pic{
+    float: left;
+    
+}
+.new-login-body .clearfix #page2{
+    width: 439px;
+    height: 377px;
+}
+.new-login-body .clearfix #page2 .new-login-box {
+    margin-top: 10px;
+    padding: 38px 37px 0;
+    background-color: #fff;
+}
+#clear{
+    clear: both;
+}
+#page2 li{
+    float: left;
+    list-style: none;
+    height: 33px;
+    line-height: 6px;
+    font: 20px 微软雅黑;
+    position: relative;
+    left:55px;  
+    color: #AEAEAE; 
+    display: list-item;
+    
+}
+#page2 .onlogintab,#page2 .logintab{
+    font-weight: 700;
+    left: 0;
+}
+#page2 .onlogintab{
+    color: #E9242B;
+}
+#page2 .logintab{
+    left:88px;  
+}
+#page2 ul{
+    width: 365px;
+}
+#page2 #uname,#page2 #upwd{
+    border:1px solid #a3a3a3;
+    height: 48px;
+    width: 313px;
+    border-radius: 6px;
+    padding-left: 50px;
+    margin-top: 10px;
+}
+#page2 #upwd{
+    margin-top: 20px;
+}
+#page2 .line-row{
+    margin-top: 10px;
+    font-size: 13px;
+    height: 19px;
+
+}
+a{
+    text-decoration: none;
+}
+#page2 .line-row a{
+    color: #3399ff;
+}
+#page2 .line-row .r-login-a{
+    float: right;
+    color: #333;
+}
+#page2 .line-row .r-login-a span{
+    color: #3399ff;
+}
+#page2 .tj-btns-login{
+    width: 100%;
+    height: 49px;
+    line-height: 19px;
+    color: #fff;
+    background: #c40001;
+    font-size: 20px;
+    font-weight: 400;
+    border:none;
+    margin: 15px 0;
+    
+}
+#page2 .new-login-box p{
+    font-weight: 600;
+    font-size: 12px;
+}
+#page2 .new-login-box .links{
+    padding-top: 10px;
+    color:#666;
+    
+}
+#page2 .new-login-box .links a{
+    color:#666;
+    display: block;
+    float: left;
+    height: 23px;
+    line-height: 20px;
+    padding-left: 20px;
+    margin-right: 10px;
+    font-size: 12px;
+}
+#page2 .new-login-box .b-area{
+    height: 28px;
+    padding-bottom: 30px;
+}

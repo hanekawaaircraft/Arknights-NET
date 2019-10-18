@@ -1,0 +1,107 @@
+.pc-follow-gift-logo { width: 145px; height: 150px; background: transparent url(../img/pc/pc-follow-gift-logo.png) 0 0 no-repeat; background-size: 145px 150px; position: fixed; right: 70px; bottom: 155px; z-index: 10000; cursor: pointer; }
+
+.pc-fg-popup .pfgp-overlay { position: fixed; top: 0; bottom: 0; right: 0; left: 0; background: rgba(0, 0, 0, 0.7); z-index: 110000; }
+
+.pc-fg-popup .pfgp-dialog { position: fixed; top: 40%; left: 50%; background: transparent; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 110010; }
+
+.pc-fg-popup .pfgp-dialog .pfgp-bg { width: 480px; height: 402px; background: transparent url(../img/pc/pc-follow-gift-02.png) 0 0 no-repeat; background-size: 480px 402px; }
+
+.pc-fg-popup .pfgp-dialog .pcfg-close { width: 44px; height: 44px; background: transparent url(../img/pc/pc-follow-gift-04.png) 0 0 no-repeat; background-size: 44px 44px; position: absolute; top: 0; right: 0; cursor: pointer; }
+
+.pc-fg-popup .pfgp-dialog .pcfg-follow { display: block; width: 270px; height: 72px; background: transparent url(../img/pc/pc-follow-gift-06.png) 0 0 no-repeat; background-size: 270px 72px; position: absolute; top: 99%; left: 50%; cursor: pointer; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); }
+
+.pc-fg-popup .pfgp-dialog .pcfg-div { display: block; width: 270px; height: 72px; background: transparent url(../img/pc/pc-follow-gift-03.png) 0 0 no-repeat; background-size: 270px 72px; position: absolute; top: 120%; left: 50%; cursor: pointer; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); }
+
+.pc-fg-popup-follow .pfcpf-overlay { position: fixed; top: 0; bottom: 0; right: 0; left: 0; background: rgba(0, 0, 0, 0.7); z-index: 110000; }
+
+.pc-fg-popup-follow .pfcpf-dialog { position: fixed; top: 48%; left: 50%; background: transparent; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 110010; }
+
+.pc-fg-popup-follow .pfcpf-dialog .pfcpf-bg { width: 400px; height: 376px; background: transparent; }
+
+.pc-fg-popup-follow .pfcpf-dialog .pfcpf-bg img { width: 400px; height: 376px; }
+
+.pc-fg-popup-follow .pfcpf-dialog .pfcpf-close { width: 44px; height: 44px; background: transparent url(../img/pc/pc-follow-gift-04.png) 0 0 no-repeat; background-size: 44px 44px; position: absolute; top: -15%; right: -5%; cursor: pointer; }
+
+.pc-fg-popup-verify .pfgpv-overlay { position: fixed; top: 0; bottom: 0; right: 0; left: 0; background: rgba(0, 0, 0, 0.7); z-index: 110000; }
+
+.pc-fg-popup-verify .pfgpv-dialog { position: fixed; top: 48%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 495px; height: 415px; background: #fff; border-radius: 22px; overflow: hidden; z-index: 110010; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-close { width: 38px; height: 38px; background: transparent url(../img/pc/pc-follow-gift-01.jpg) 0 0 no-repeat; background-size: 38px 38px; position: absolute; top: 18px; right: 18px; cursor: pointer; }
+
+.pc-fg-popup-verify .pfgpv-dialog h1 { font-size: 26px; color: #fff; height: 68px; line-height: 68px; background: #f92320; text-align: center; margin: 0; font-weight: 300; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-form-content { padding: 0 60px 0 65px; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-form-content h3 { font-size: 15px; font-weight: normal; color: #737373; line-height: 42px; margin-top: 8px; margin-bottom: 0; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-form-content input { width: 370px; height: 45px; line-height: 45px; font-size: 16px; color: #333; padding: 0 10px; border: 1px solid #666; outline: none; box-sizing: border-box; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-form-content .pfgpv-code-content { width: 370px; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-form-content .pfgpv-code-content .pfgpvc-other { width: 370px; font-size: 0; white-space: nowrap; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-form-content .pfgpv-code-content input { display: inline-block; font-size: 16px; width: 205px; vertical-align: top; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-form-content .pfgpv-code-content .pfgpv-code-a { display: inline-block; vertical-align: top; margin-left: 10px; width: 155px; text-align: center; height: 45px; line-height: 45px; background: #f92320; font-size: 16px; color: #fff; transition: all 0.15s ease-in-out; cursor: pointer; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-form-content .pfgpv-code-content .pfgpv-code-a.disabled { background: #afafaf; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-receive-a { display: block; width: 374px; height: 68px; line-height: 68px; text-align: center; background: #f92320; color: #fff; font-size: 24px; border-radius: 10px; cursor: pointer; margin: 26px auto 0; font-weight: 300; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-receive-a:hover, .pc-fg-popup-verify .pfgpv-dialog .pfgpv-receive-a:active { text-decoration: none; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-checkbox { width: 370px; text-align: center; margin: 20px auto 0; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-checkbox .pfgpv-checkbox-input { display: inline-block; vertical-align: -1.5px; width: 13px; height: 13px; margin: 0; padding: 0; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-checkbox .pfgpv-checkbox-label { display: inline-block; vertical-align: middle; font-size: 13px; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-checkbox .pfgpv-checkbox-label a { display: inline-block; margin: 0; width: auto; text-align: left; line-height: 1em; font-size: 13px; text-decoration: none; color: #f92320; }
+
+.pc-fg-popup-verify .pfgpv-dialog .pfgpv-checkbox .pfgpv-checkbox-label a:hover, .pc-fg-popup-verify .pfgpv-dialog .pfgpv-checkbox .pfgpv-checkbox-label a:active { text-decoration: none; }
+
+.pc-fg-popup-new .pfgpn-overlay { position: fixed; top: 0; bottom: 0; right: 0; left: 0; background: rgba(0, 0, 0, 0.7); z-index: 110000; }
+
+.pc-fg-popup-new .pfgpn-dialog { position: fixed; top: 48%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 495px; height: 415px; background: #fff; border-radius: 22px; overflow: hidden; z-index: 110010; }
+
+.pc-fg-popup-new .pfgpn-dialog .pfgpn-close { width: 38px; height: 38px; background: transparent url(../img/pc/pc-follow-gift-01.jpg) 0 0 no-repeat; background-size: 38px 38px; position: absolute; top: 18px; right: 18px; cursor: pointer; }
+
+.pc-fg-popup-new .pfgpn-dialog h1 { font-size: 26px; color: #fff; height: 68px; line-height: 68px; background: #f92320; text-align: center; margin: 0; font-weight: 300; }
+
+.pc-fg-popup-new .pfgpn-dialog h2 { margin: 28px 0 24px; font-size: 20px; text-align: center; color: #f92320; line-height: 1.8em; font-weight: normal; }
+
+.pc-fg-popup-new .pfgpn-dialog h3, .pc-fg-popup-new .pfgpn-dialog h4 { width: 305px; color: #737373; margin: 0 auto; text-align: left; line-height: 1.6em; font-size: 16px; font-weight: 300; }
+
+.pc-fg-popup-new .pfgpn-dialog .line { width: 305px; height: 1px; background: #ccc; margin: 12px auto; }
+
+.pc-fg-popup-new .pfgpn-dialog h4 { font-size: 14px; }
+
+.pc-fg-popup-new .pfgpn-dialog h4 .change-pass-a { color: #f92320; text-decoration: none; cursor: pointer; }
+
+.pc-fg-popup-new .pfgpn-dialog h4 .change-pass-a:hover { text-decoration: none; }
+
+.pc-fg-popup-new .pfgpn-dialog .popup-footer { margin-top: 24px; white-space: nowrap; font-size: 0; padding-left: 35px; }
+
+.pc-fg-popup-new .pfgpn-dialog .popup-footer .go-buy, .pc-fg-popup-new .pfgpn-dialog .popup-footer .look-my { display: inline-block; width: 205px; height: 65px; line-height: 65px; background: #f92320; color: #fff; font-size: 18px; border-radius: 10px; vertical-align: top; text-align: center; cursor: pointer; text-decoration: none; }
+
+.pc-fg-popup-new .pfgpn-dialog .popup-footer .go-buy:hover, .pc-fg-popup-new .pfgpn-dialog .popup-footer .look-my:hover { text-decoration: none; }
+
+.pc-fg-popup-new .pfgpn-dialog .popup-footer .look-my { margin-left: 20px; }
+
+.pc-fg-popup-old .pfgpo-overlay { position: fixed; top: 0; bottom: 0; right: 0; left: 0; background: rgba(0, 0, 0, 0.7); z-index: 110000; }
+
+.pc-fg-popup-old .pfgpo-dialog { position: fixed; top: 48%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 495px; height: 415px; background: #fff; border-radius: 22px; overflow: hidden; z-index: 110010; }
+
+.pc-fg-popup-old .pfgpo-dialog .pfgpo-close { width: 38px; height: 38px; background: transparent url(../img/pc/pc-follow-gift-01.jpg) 0 0 no-repeat; background-size: 38px 38px; position: absolute; top: 18px; right: 18px; cursor: pointer; }
+
+.pc-fg-popup-old .pfgpo-dialog h1 { font-size: 26px; color: #fff; height: 68px; line-height: 68px; background: #f92320; text-align: center; margin: 0; font-weight: 300; }
+
+.pc-fg-popup-old .pfgpo-dialog h2 { margin: 75px 0 24px; font-size: 20px; text-align: center; color: #f92320; line-height: 1.8em; font-weight: normal; }
+
+.pc-fg-popup-old .pfgpo-dialog .popup-footer { margin-top: 80px; white-space: nowrap; font-size: 0; padding-left: 35px; }
+
+.pc-fg-popup-old .pfgpo-dialog .popup-footer .go-buy, .pc-fg-popup-old .pfgpo-dialog .popup-footer .look-my { display: inline-block; width: 205px; height: 65px; line-height: 65px; background: #f92320; color: #fff; font-size: 18px; border-radius: 10px; vertical-align: top; text-align: center; cursor: pointer; text-decoration: none; }
+
+.pc-fg-popup-old .pfgpo-dialog .popup-footer .go-buy:hover, .pc-fg-popup-old .pfgpo-dialog .popup-footer .look-my:hover { text-decoration: none; }
+
+.pc-fg-popup-old .pfgpo-dialog .popup-footer .look-my { margin-left: 20px; }

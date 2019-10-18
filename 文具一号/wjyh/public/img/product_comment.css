@@ -1,0 +1,138 @@
+.f_product_commet{
+	font-family: tahoma, arial, 宋体;
+	font-size: 12px;
+	margin-bottom: 10px;
+	overflow:hidden;
+}
+.first_commet{
+	color: #999;
+	float: left;
+	width: 150px;
+	font-family: tahoma, arial, 宋体;
+	font-size: 12px;
+}
+.commet_content{
+	color:#000;
+	width: 320px;
+	float: left;
+	font-family: tahoma, arial, 宋体;
+font-size: 12px;
+}
+.f_explain_commet{
+	margin-bottom: 10px;
+	overflow:hidden;
+	width: 470px;
+	font-family: tahoma, arial, 宋体;
+font-size: 12px;
+}
+.explain_commet{
+	float: left;
+	width: 150px;
+	font-family: tahoma, arial, 宋体;
+	font-size: 12px;
+	color: #AF874D;
+}
+.explain_commet_content{
+	width: 320px;
+	float: left;
+	color: #AF874D;
+	font-family: tahoma, arial, 宋体;
+font-size: 12px;
+}
+.f_append_commet{
+	overflow:hidden;
+	width: 470px;
+	font-family: tahoma, arial, 宋体;
+font-size: 12px;
+margin-bottom: 10px;
+}
+.append_commet{
+	float: left;
+	width: 150px;
+	font-family: tahoma, arial, 宋体;
+	font-size: 12px;
+	color: #999;
+}
+.append_commet_content{
+	color:#000;
+	width: 320px;
+	float: left;
+	font-family: tahoma, arial, 宋体;
+font-size: 12px;
+}
+.commet_img{
+	border: 1px solid #E3E3E3;
+	width: 40px;
+	height: 40px;
+	margin-right: 5px;
+	margin-top: 2px;
+	float: left;
+	font-family: tahoma, arial, 宋体;
+font-size: 12px;
+padding: 2px;
+}
+.commet_imgsbox{
+	overflow:hidden;
+}
+.commet_parentbox{
+	float:left;
+}
+.commet_user_list_box{
+	overflow:hidden;
+	width: 790px;
+	border-bottom: 1px solid #E3E3E3;
+	margin-top: 10px;
+}
+.commet_user{
+	font-family: tahoma, arial, 宋体;
+font-size: 12px;
+float: right;
+    margin-right: 20px;
+}
+.commet_date{
+	color: #999999;
+}
+.f_color{
+	
+}
+.commet_content_text{
+	margin-bottom: 10px;
+}
+
+
+
+/* add by huangkai */
+.x-detail-buy{
+	height: 33px;
+    margin-left: 62px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.x-detail-buy a.buy-now{
+	display: block;
+	float: left;
+	width: 160px;
+	height: inherit;
+	line-height: 33px;
+	text-align: center;
+	color: #fff;
+	background-color: #c40000;
+	border-radius: 5px;
+	text-decoration: none;
+	font-size: 15px;
+	cursor: pointer;
+}
+.x-detail-buy a.buy-now.end{
+	background: #dfdfdf;
+	cursor: text;
+}
+.x-detail-buy .activity-djs{
+	float: left;
+	height: 31px;
+	line-height: 30px;
+	width: 300px;
+	text-align: center;
+	border: 1px dashed #dfdfdf;
+	margin-left: 10px;
+	color: #595757;
+}

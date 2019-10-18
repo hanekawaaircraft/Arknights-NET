@@ -1,0 +1,104 @@
+.arrow_left {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 90px;
+        z-index: 10;
+        cursor: pointer;
+        background: url(views/mall/images/sameproduct/arrow_left.png);
+}
+.arrow_right {
+    width: 35px;
+    height: 35px;
+    background: url(views/mall/images/sameproduct/arrow_right.png);
+    position: absolute;
+    cursor: pointer;
+    top: 90px;
+    right: 2px;
+    z-index: 10;
+}
+.head_icon{
+    position:absolute;
+    top:0px;
+    right:20px;
+    width:20px;
+    height:20px;
+}
+.pop-cover{
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url(/views/member/images/cover-bg2.png) repeat;
+    z-index: 99999999;
+    top: 0;
+    left: 0;
+    display: none;
+    
+}
+.pop-cover-img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    text-align: center;
+    transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+}
+.pop-cover-close{
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+.wjyh-notice h3{float: left;font-size: 14px;line-height: 42px;margin-left:4px;}
+.wjyh-notice dd a{overflow:hidden;    line-height:40px;display:block;padding: 0 8px;color:#9d9b9b;}
+.wjyh-notice dd a span:last-child{float: right;}
+.wjyh-notice dd a span:hover{color: #b40000;}
+.wjyh-notice dd a span:first-child{float: left; width:100%; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.wjyh-notice {width: 191px;height: 312px;}
+.wjyh-notice dt{overflow:hidden;height: 40px;line-height: 30px;background: #e1e0e0;font-size:0}
+.wjyh-notice dt a{
+    line-height: 40px;
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    font-size:12px;
+    text-align: center;
+}
+.wjyh-notice dt a:first-child{
+	
+    background: #666;
+	color:#fff;
+}
+.wjyh-notice .wjyh-info{
+	font-weight: 800;
+	 font-size: 14px;
+	 font-family:'宋体';
+}
+.wjyh-notice .wjyh-info:hover{text-decoration:none;}
+.wjyh-notice .wjyh-info:nth-child(2){
+	color:#666;
+}
+
+.wjyh-notice dt a:hover{text-decoration: underline;cursor: pointer;}
+.wjyh-notice dd a:hover{text-decoration: underline;cursor: pointer;}
+.wjyh-notice dd{overflow:hidden;}
+.wjyh-notice dd p{border-bottom: 1px solid #eaeaea;position: relative;top: 38px;width: 162px;}
+
+.notice-now{color:#CA1E1D ;}
+.grid-col-199 a:hover{
+	text-decoration:none;
+}
+.index-a{
+	width:198px;
+	height:54px;
+}
+.index-a h2{
+	text-align:center;
+	color:#4c4948;
+}
+.index-a p{
+	text-align:center;
+	color:#4c4948;
+}

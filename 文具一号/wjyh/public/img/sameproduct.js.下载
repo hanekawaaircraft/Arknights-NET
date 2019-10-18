@@ -1,0 +1,23 @@
+$(".title").click(function(){
+//	var arrow_left=$(this).parent().siblings().children().children(".arrow_left");
+//	var arrow_right=$(this).parent().siblings().children().children(".arrow_right");
+//	var arrow_left2=$(this).parent().siblings().children().children(".arrow_left2");
+//	var arrow_right2=$(this).parent().siblings().children().children(".arrow_right2");
+//	if(arrow_left.attr("class")=="arrow_left"){
+//		alert(111)
+//		arrow_left.removeClass("arrow_left").addClass("arrow_left2");
+//		arrow_right.removeClass("arrow_right").addClass("arrow_right2");
+//	}else{
+//		alert(222);
+//		arrow_left2.removeClass("arrow_left2").addClass("arrow_left");
+//		arrow_right2.removeClass("arrow_right2").addClass("arrow_right");
+//	}
+		$(this).addClass("curr").siblings(".title").removeClass("curr");
+	$(".content>div").eq($(this).index()).removeClass("dn").siblings().addClass("dn");
+	
+//	$(this).addClass("curr").siblings(".title").removeClass("curr");
+////	$(".content>div").eq($(this).index()).removeClass("dn").siblings().addClass("dn");
+//	$(".content>div").removeClass("dn").siblings().addClass("dn");
+})
+
+

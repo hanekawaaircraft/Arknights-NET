@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文具一号-登录</title>
+    <script>
+        function login(){
+            var $uname=uname.value;
+            var $upwd=upwd.value;
+            if(!$uname){
+                d1.innerHTML="用户名为空";
+                return;
+            }
+            if(!$upwd){
+                d2.innerHTML="密码为空";
+                return;
+            }
+            var xhr=new XMLHttpRequest();
+
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4&&xhr.status==200){
+                    var result=xhr.responseText;
+                    
+                    if(result=="1"){
+                        alert("登录成功");
+                    };
+                    if(result=="0"){
+                        alert("登录失败");
+                    };
+                };
+            };
+
+            xhr.open("get","/user/v1/login/"+$uname+"&"+$upwd,true);
+            xhr.send();
+        }
+    </script>
+    <style>
+        *{
+            padding: 0;margin: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/1.css">
+</head>
+<body>
+    <div id="header">
+        <div id="header-inner">
+            <div class="logo">
+                <a target="_self" href="#"><img src="./img/deng_logo.jpg" alt></a><span>欢迎登录</span>
+                </div>
+            </div>
+        </div>
+    <div class="new-login-body">
+        <div class="clearfix">
+            <div class="pic"><img src="./img/login.jpg" alt=""></div>
+            <div id="page2">
+                <div class="new-login-box">
+                    
+                    
+                    <div class=".alert-box-body-title.loginv">
+                        <ul>
+                            <li class="onlogintab">账号密码登录</li>
+                            <li>|</li>
+                            <li class="logintab">手机验证码登录</li>
+                            <div id="clear"></div>
+                        </ul>
+                    </div>
+                    <input type="text" id="uname" placeholder="支付账号/采购账号/邮箱/手机号"><span id="d1"></span>
+                    <input type="password" id="upwd" placeholder="请输入密码"><span id="d2"></span>
+                    <div class="line-row">
+                        <a href="#">忘记密码</a>
+                        <a href="#" class="r-login-a">还没有账号？<span>快速注册</span></a>
+                    </div>
+                    <button onclick="login()" class="tj-btns-login">登录</button>
+                    <div class="b-area">
+                    <p>第三方登录</p>
+                        <div class="links">
+                            <a href="#">QQ登录</a>
+                            <a href="#">微博登录</a>
+                            <a href="#">微信登录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer> 
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>

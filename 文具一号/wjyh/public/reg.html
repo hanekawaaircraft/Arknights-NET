@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var bool1=false;
+        var bool2=false;
+        function reg(){
+            if(bool1&&bool2){
+                var $uname=uname.value;
+                var $upwd=upwd.value;
+                var $email=email.value;
+                var $phone=phone.value;
+                var $user_name=user_name.value;
+                var $gender="1";
+                if(m.checked){
+                    $gender="1";
+                };
+                if(m.checked){
+                    $gender="0";
+                };
+                
+                var xhr=new XMLHttpRequest();
+
+                xhr.onreadystatechange=function(){
+                    if(xhr.readyState==4&&xhr.status==200){
+                        var result=xhr.responseText;
+                        alert("chenggong");
+                    };
+                };
+                
+
+                xhr.open("post","/user/v1/reg",true);
+
+                var formdata="&uname="+$uname+"&upwd="+$upwd+"&email="+$email+"&phone="+$phone+"&user_name="+$user_name+"&gender="+$gender;
+                xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+                xhr.send(formdata);
+
+            }else{
+                alert("不能");
+            };
+        };
+        function check(){
+            var $uname=uname.value;
+            var xhr=new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4&&xhr.status==200){
+                    var result=xhr.responseText;
+                    if(result==1){
+                        d1.innerHTML="用户名已经被注册啦";
+                    };
+                    if(result==0){
+                        d1.innerHTML="用户名可以使用";
+                        bool1=true;
+                    };
+                };
+            };
+            xhr.open("get","/user/v1/check/"+$uname,true);
+            xhr.send();
+        };
+        function show(){
+            var $upwd=upwd.value;
+            var $ipwd=ipwd.value;
+            if($upwd===$ipwd){
+                d2.innerHTML="OK";
+                bool2=true;
+            }else{
+                d2.innerHTML="密码不一致";
+            };
+        };
+    </script>
+</head>
+<body>
+    <div>
+        用户名：<input type="text" id="uname" onblur="check()" maxlength="16">
+        <div id="d1"></div>
+        密码：<input type="password" id="upwd" maxlength="18"><br>
+        确认密码<input type="password" id="ipwd" onblur="show()" maxlength="18">
+        <div id="d2"></div>
+        邮箱<input type="text" id="email"><br>
+        电话：<input type="text" id="phone"><br>
+        真实姓名：<input type="text" id="user_name"><br>
+        <input type="radio" name="sex" id="m">
+        <label for="m">男</label>
+        <input type="radio" name="sex" id="f">
+        <label for="f">女</label>
+        <br>
+        <button onclick="reg()">注册</button>
+    </div>
+   
+</body>
+</html>
