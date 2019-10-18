@@ -1,0 +1,93 @@
+﻿body{ 
+	padding: 0; 
+	margin: 0;
+	background: url(../picture/head-bg.jpg); 
+	color: #D5D6E2;
+	font-weight: 500;
+	font-size: 1.05em;
+	font-family: "Microsoft YaHei";
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+a{ 
+	color: rgba(255, 255, 255, 0.6);
+	outline: none;
+	text-decoration: none;
+	transition: 0.2s;
+
+}
+a:hover,a:focus{
+	color:#74777b;
+	text-decoration: none;
+}
+.container{
+	margin: 0 auto;
+}
+.demo{
+	padding: 1.5em 0;
+}
+.row{
+	margin-bottom: 15px;
+}
+
+/* Header */
+.header{
+	padding: 1em 190px 1em;
+	letter-spacing: -1px;
+	text-align: center;
+	background: #888;
+	margin-left: 15px;
+	margin-right:-15px;
+	/* margin-bottom: 0; */
+}
+.header h1 {
+	color: #D5D6E2;
+	font-weight: 600;
+	font-size: 2em;
+	line-height: 1;
+	margin-bottom: 0;
+}
+.header h1 span {
+	display: block;
+	font-size: 60%;
+	font-weight: 400;
+	padding: 0.8em 0 0.5em 0;
+	color: #c3c8cd;
+}
+/*nav*/
+.header-demo a{
+	color: #fff;
+	text-decoration: none;
+}
+.header-demo{
+	width: 100%;
+	padding-bottom: 1.2em;
+}
+.header-demo a{
+	display: inline-block;
+	margin: 0.5em;
+	padding: 0.6em 1em;
+	border: 3px solid #fff;
+	font-weight: 700;
+}
+.header-demo a:hover{
+	opacity: 0.6;
+}
+.header-demo a.current{
+	background:#1d7db1;
+	color: #fff; 
+}

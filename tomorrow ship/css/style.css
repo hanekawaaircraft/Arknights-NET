@@ -1,0 +1,65 @@
+body { 
+    font-family: Arial;
+    background: url(../images/head-bg.jpg);
+}
+
+.header-img :hover { 
+    /* height: 36px;  */
+    
+}
+
+#container {
+    width: 920px; 
+    padding: 0 20px; 
+    margin: 0 auto; 
+    /* display: table-cell; */ 
+}
+
+.group:after { 
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden; 
+}
+
+* html .group { 
+    height: 1%; 
+}
+
+*:first-child+html .group { 
+    min-height: 1px; 
+}
+
+h1, h2, h3, p { 
+    color: #333; 
+
+}
+h2 { 
+    font-family: 'AdelleBasicBold', Arial, sans-serif; 
+}
+h3 { 
+    font-family: 'BonvenoCFLight', Arial, sans-serif; 
+    margin-bottom: 20px; 
+}
+
+a { 
+    text-decoration: none; 
+    color: #0090e2; 
+}
+
+p { 
+    line-height: 23px; 
+    margin-bottom: 20px; 
+}
+p:last-of-type { 
+    margin-bottom: 0px; 
+}
+
+#carbonads-container { 
+    margin: 0 auto 50px; 
+    width: 300px;  
+}
+#carbonads-container .carbonad .carbonad-tag { 
+    text-align: left !important; 
+}

@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test</title>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            /* background: beige; */
+            font-family: Alegreya Sans, sans-serif;
+        }
+
+        nav {
+            display: block;
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            user-select: none;
+            transform: translate3d(25px, -25px, 0);
+            transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
+        }
+
+        nav.open {
+            transform: translate3d(0, 0, 0);
+        }
+
+        nav.top-right {
+            top: -140px;
+            right: -140px;
+        }
+
+        .disc {
+            position: absolute;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+            font: 25px Alegreya Sans, sans-serif;
+            line-height: 40px;
+            padding-top: 10px;
+            border-radius: 250px;
+            transform: scale3d(0.5, 0.5, 0.5) rotate3d(0, 0, 1, 190deg);
+            pointer-events: none;
+            opacity: 0;
+            cursor: pointer;
+            transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), opacity 0.5s;
+
+        }
+
+        .disc div {
+            transform: rotate(180deg);
+        }
+
+        .open .disc {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        .l1 {
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background: #053162;
+            transition-delay: 0s;
+        }
+
+        .open .l1 {
+            transition-delay: 0s;
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+            opacity: 1;
+        }
+
+        .open .l1:hover {
+            background: #000000;
+            color: #fff;
+            transition-delay: 0s;
+        }
+
+        .open .l1:active {
+            background: #463baa;
+            color: #fff;
+        }
+
+        .open .l1.toggle {
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+        }
+
+        .l2 {
+            top: 50px;
+            left: 50px;
+            right: 50px;
+            bottom: 50px;
+            background: #2978df;
+            transition-delay: 0.1s;
+        }
+
+        .open .l2 {
+            transition-delay: 0.1s;
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+            opacity: 1;
+        }
+
+        .open .l2:hover {
+            background: #000000;
+            color: #fff;
+            transition-delay: 0s;
+        }
+
+        .open .l2:active {
+            background: #3663ac;
+            color: #fff;
+        }
+
+        .open .l2.toggle {
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+        }
+
+        .l3 {
+            top: 100px;
+            left: 100px;
+            right: 100px;
+            bottom: 100px;
+            background: #229fe7;
+            transition-delay: 0.2s;
+        }
+
+        .open .l3 {
+            transition-delay: 0.2s;
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+            opacity: 1;
+        }
+
+        .open .l3:hover {
+            background: #000000;
+            color: #fff;
+            transition-delay: 0s;
+        }
+
+        .open .l3:active {
+            background: #238eb9;
+            color: #fff;
+        }
+
+        .open .l3.toggle {
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+        }
+
+        .l4 {
+            top: 150px;
+            left: 150px;
+            right: 150px;
+            bottom: 150px;
+            background: #1cddff;
+            transition-delay: 0.3s;
+        }
+
+        .open .l4 {
+            transition-delay: 0.3s;
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+            opacity: 1;
+        }
+
+        .open .l4:hover {
+            background: #000000;
+            color: #fff;
+            transition-delay: 0s;
+        }
+
+        .open .l4:active {
+            background: #1fbdc8;
+            color: #fff;
+        }
+
+        .open .l4.toggle {
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+        }
+
+        .l5 {
+            top: 200px;
+            left: 200px;
+            right: 200px;
+            bottom: 200px;
+            background: #0effff;
+            transition-delay: 0.4s;
+        }
+
+        .open .l5 {
+            transition-delay: 0.4s;
+            transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
+            opacity: 1;
+        }
+
+        .open .l5:hover {
+            background: #0fc7ae;
+            color: #fff;
+            transition-delay: 0s;
+        }
+
+        .open .l5:active {
+            background: #056fc5;
+            color: #ffffff;
+        }
+
+        .open .l5.toggle {
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
+        }
+
+        .toggle {
+            line-height: 100px;
+            padding: 0;
+            width: 100px;
+            background: rgb(0, 255, 221);
+            opacity: 1;
+            transform: none;
+            pointer-events: auto;
+            transition-delay: 0s;
+        }
+
+        .open .toggle {
+            transform: rotate3d(0, 0, 1, 0deg);
+        }
+
+        .toggle:hover {
+            background: #1a1600;
+            color: rgb(0, 238, 255);
+        }
+
+        .toggle:active {
+            background: #007580;
+            color: #fff;
+            transform: scale(0.9);
+            transition-duration: 0s;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="top-right">
+        <a class="disc l1">
+            <div>画廊</div>
+        </a>
+        <a class="disc l2">
+            <div>干员寻访</div>
+        </a>
+        <a class="disc l3">
+            <div>版本信息</div>
+        </a>
+        <a class="disc l4">
+            <div>首页</div>
+        </a>
+        <a class="disc l5 toggle">
+            戳我
+        </a>
+    </nav>
+
+    <script>
+        toggle = document.querySelectorAll(".toggle")[0];
+        nav = document.querySelectorAll("nav")[0];
+        toggleOpen = '戳我';
+        toggleClose = '合上';
+
+        toggle.addEventListener('click', function () {
+            nav.classList.toggle('open');
+
+            if (nav.classList.contains('open')) {
+                toggle.innerHTML = toggleClose;
+            } else {
+                toggle.innerHTML = toggleOpen;
+            }
+        }, false);
+    </script>
+</body>
+
+</html>

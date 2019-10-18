@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+<link rel="stylesheet" href="css/demo.css">
+
+</head>
+<body>
+<video src="images/bg.mp4" autoplay="autoplay" loop="loop" muted="muted" object-fit="fill"></video>
+<div class="logo"><img src="images/logo.png"></div>	
+<div class="main">
+	<div class="main-page">
+		<div class="left">
+			<div class="nav-back"></div>
+			<div class="nav">
+				<div class="on">游戏下载</div>
+				<div>预览</div>
+				<!-- <div>活动公告</div>
+				<div>更新信息</div>
+				<div>新干员预览</div>
+				<div>千里眼</div> -->
+			</div>
+		</div>
+		<div class="right">
+			<div class="content-back"></div>
+			<div class="content">
+				<div id="content-1">
+					<img src="images/1.png" alt="">
+					<img src="images/code-download.png" alt="">
+				</div>
+				<div>2</div>
+				<!-- <div>3</div>
+				<div>4</div>
+				<div>5</div>
+				<div>6</div> -->
+			</div>
+		</div>
+	<!-- <div class="clear"></div> -->
+	</div>
+</div>
+
+
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(".main-page .nav div").mouseenter(function () {
+	var $this = $(this);
+	var index = $this.index();
+}).mouseleave(function () {
+	var $this = $(this);
+	var index = $this.index();
+}).click(function () {
+	var $this = $(this);
+	var index = $this.index();
+	var l = -(index * 350);
+	$(".main-page .nav div").removeClass("on");
+	$(".main-page .nav div").eq(index).addClass("on");
+	$(".main-page .content div:eq(0)").stop().animate({ "margin-top": l }, 500);
+});
+</script>
+
+</body>
+</html>

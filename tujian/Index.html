@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title></title>
+<meta name="description" content="">
+<meta name="author" content="v-zhantaocao">
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+<link rel="stylesheet" href="css/page.css" />
+<link rel="stylesheet" href="css/jquery.multiscroll.css" />
+
+</head>
+
+<body>
+<div>
+	<div id="header">
+		<img src="images/logo.png">
+		<!-- <p></p> -->
+	</div>
+
+	<nav class="top-right">
+		<a class="disc l1">
+			<div>画廊</div>
+		</a>
+		<a class="disc l2">
+			<div>干员寻访</div>
+		</a>
+		<a class="disc l3">
+			<div>版本信息</div>
+		</a>
+		<a class="disc l4">
+			<div>首页</div>
+		</a>
+		<a class="disc l5 toggle">
+			戳我
+		</a>
+	</nav>
+
+	<div id="multiscroll">
+		<div class="ms-left">
+			<div class="ms-section active l-1">
+				<!-- 右1 -->
+				<img src="images/red.png" class="img1"><img src="images/nearl.png" class="img1 img-move">
+				<div class="pop-up">
+					<div class="content">
+					  	<div class="container">      
+							<span class="close">关闭</span>
+							<img src="images/zz-logo.png">
+							<div class="title">
+						  		<h1>临光</h1>
+							</div>
+							<div class="title-right">
+						  		<p>前卡西米尔荣耀骑士,感染者救助团体"使徒"一员。</p>
+						  		<p>信物:古旧褪色的卡西米尔骑士纹章。乌银雕饰的天马振翅欲飞。</p>
+							</div>
+					  	</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="ms-section l-2">
+				<!-- 右2 -->
+				<img src="images/chen.png"><img src="images/hsguma.png">
+
+				
+				
+			</div>
+			<div class="ms-section l-3">
+				<!-- 右3 -->
+				<img src="images/texas.png"><img src="images/angel.png">
+			</div>
+		</div>
+		<div class="ms-right">
+			<div class="ms-section active r-1">
+				<!-- 左1 -->
+				<img src="images/amiya.png"><img src="images/kalts.png" >
+			</div>
+			<div class="ms-section r-2">
+				<!-- 左2 -->
+				<img src="images/frank.png"><img src="images/liskarm.png">
+			</div>
+			<div class="ms-section r-3">
+				<!-- 左3 -->
+				<img src="images/silent.png"><img src="images/ifrit.png">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <div id="footer">底部</div> -->
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.easings.min.js"></script>
+<script src="js/jquery.multiscroll.min.js"></script>
+<script>
+//页面滚动效果
+$(function(){
+	$('#multiscroll').multiscroll({
+		sectionsColor:['#444', '#555', '#666'] ,
+		loopTop:false,
+		loopBottom:false ,
+		navigation:true ,
+		navigationTooltips:['罗德岛','龙门-黑钢','企鹅-莱茵'],
+		easing: 'easeOutBack' ,
+		paddingTop:'70px' ,
+		paddingBottom:'70px',
+		/*afterRender: function(){
+			//alert('初始化完成') ;
+		},
+		afterResize:function(){
+			//alert('浏览器窗口大小调整了') ;
+		},
+		onLeave:function(){
+			//alert('开始滚动') ;
+		},
+		afterLoad:function(){
+			//alert('滚动完成') ;
+		}*/
+	});
+});
+
+$('.img1').click(function(){
+	$('.img1').addClass('img-move');
+  	$('.pop-up').addClass('p-open');
+});
+
+$('.pop-up .close').click(function(){
+  	$('.pop-up').removeClass('p-open');
+	$('.img1').removeClass('img-move');
+});
+
+
+
+
+//导航球
+toggle = document.querySelectorAll(".toggle")[0];
+nav = document.querySelectorAll("nav")[0];
+toggleOpen = '戳我';
+toggleClose = '合上';
+toggle.addEventListener('click', function () {
+	nav.classList.toggle('open');
+	if (nav.classList.contains('open')) {
+		toggle.innerHTML = toggleClose;
+	} else {
+		toggle.innerHTML = toggleOpen;
+	}
+}, false);
+</script>
+
+</body>
+</html>
